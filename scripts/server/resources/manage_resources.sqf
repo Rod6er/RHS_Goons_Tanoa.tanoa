@@ -8,7 +8,7 @@ resources_intel = saved_intel_res;
 
 while { GRLIB_endgame == 0 } do {
 
-	_base_tick_period = 4800;
+	_base_tick_period = 120;
 
 	if ( count allPlayers > 0 ) then {
 
@@ -22,7 +22,7 @@ while { GRLIB_endgame == 0 } do {
 
 		_base_tick_period = _base_tick_period / GRLIB_resources_multiplier;
 
-		if ( _base_tick_period < 300 ) then { _base_tick_period = 300 };
+		if ( _base_tick_period < 10 ) then { _base_tick_period = 10 };
 
 		sleep _base_tick_period;
 
@@ -35,7 +35,7 @@ while { GRLIB_endgame == 0 } do {
 
 			} else {
 
-				if ( ( { typeof _x == ammobox_b_typename } count vehicles ) <= ( ceil ( ( count _blufor_mil_sectors ) * 1.3 ) ) ) then {
+				if ( ( { typeof _x == ammobox_b_typename } count vehicles ) <= ( ceil ( ( count _blufor_mil_sectors ) * 100 ) ) ) then {
 
 					_spawnsector = ( _blufor_mil_sectors call BIS_fnc_selectRandom );
 					_spawnpos = zeropos;
@@ -60,5 +60,5 @@ while { GRLIB_endgame == 0 } do {
 		};
 	};
 
-	sleep 300;
+	sleep 120;
 };
