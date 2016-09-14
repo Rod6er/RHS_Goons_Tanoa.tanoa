@@ -14,7 +14,7 @@ while { GRLIB_endgame == 0 } do {
 
 		_blufor_mil_sectors = [];
 		{
-			if ( _x in sectors_military ) then {
+			if ( (_x in sectors_military) or (_x in sectors_factory) ) then {
 				_blufor_mil_sectors pushback _x;
 				_base_tick_period = _base_tick_period * 0.82;
 			};
