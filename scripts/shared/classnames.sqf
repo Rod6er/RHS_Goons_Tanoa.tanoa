@@ -224,7 +224,7 @@ support_vehicles = [
 	["B_Slingload_01_Fuel_F",5,0,0],					//Huron_Fuel
 	["B_Slingload_01_Medevac_F",5,0,0],					//Huron_Medevac
 	["B_Slingload_01_Ammo_F",5,0,0],					//Huron_Ammo
-	["Box_NATO_AmmoVeh_F",0,154,0],						//These are just to make friendly the ammo crates recycleable.
+	["Box_NATO_AmmoVeh_F",0,39,0],						//These are just to make friendly the ammo crates recycleable.
 	["Box_East_AmmoVeh_F",0,115,0]						//These are just to make friendly the ammo crates recycleable.
 ];
 if ( isNil "support_vehicles_extension" ) then { support_vehicles_extension = [] };
